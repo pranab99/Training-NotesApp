@@ -3,7 +3,6 @@ const yargs = require('yargs');
 const { demandOption } = require('yargs');
 
 
-
 //Creating add command
 yargs.command({
     command: 'add',
@@ -32,8 +31,16 @@ yargs.command({
 yargs.command({
     command: 'remove',
     describe: 'Remove a note',
-    handler: function () {
-        console.log("Removing a new note");
+    builer: {
+        title: {
+            describe: 'Note Title',
+            demandOption: true,
+            type: 'string'
+        }
+
+    },
+    handler: function (argv) {
+        notes.removeNote(argv.title);
     }
 });
 
@@ -42,8 +49,8 @@ yargs.command({
 yargs.command({
     command: 'list',
     describe: 'List all notes',
-    handler: function () {
-        console.log("Listing out all the notes");
+    handler: function (argv) {
+        notes.listNote(argv.title)
     }
 });
 
