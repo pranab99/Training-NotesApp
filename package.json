@@ -1,0 +1,22 @@
+{
+  "name": "notes-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/pranab99/Training-NotesApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pranab99/Training-NotesApp/issues"
+  },
+  "homepage": "https://github.com/pranab99/Training-NotesApp#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
+}
