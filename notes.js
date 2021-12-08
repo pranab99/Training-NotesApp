@@ -1,4 +1,5 @@
 const fs = require('fs');
+// const chalk = require('chalk');
 const getNotes = () => {
 
 }
@@ -40,11 +41,22 @@ const removeNote = (title) => {
 
 }
 
-const listNote = (title) => {
+const listNote = () => {
+    const notes = loadNotes();
+    
+    notes.forEach(element => {
+        console.log(element.title)
+
+    });
+
+    
+}
+const readNote = (title) => {
     const notes = loadNotes();
     var count = 0;
     notes.forEach(element => {
         if (title === element.title) {
+            console.log(element.title);
             console.log(element.body);
             count = 1;
         }
@@ -80,5 +92,6 @@ module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNote: listNote
+    listNote: listNote,
+    readNote: readNote
 }
